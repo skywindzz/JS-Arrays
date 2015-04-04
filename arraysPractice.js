@@ -128,6 +128,10 @@ var str = 'this is my sentence';
 
   //Code Here
 
+var reverse = function(string) {
+    string = string.split("").reverse().join("");
+    return string;
+}
 
 //Next Problem
 
@@ -194,7 +198,17 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
   //Code Here
 
-var addTen 
+
+var addTen = function(num) {
+    var changeInt = [];
+    var plusTen = [];
+      for (var i = 0; i < num.length; i++) {
+         changeInt.push(parseInt(num[i]));
+         plusTen.push(changeInt[i] + 10);
+
+      }
+    console.log(plusTen);
+}
 
 //Next Problem
 
@@ -214,7 +228,13 @@ for(var i = 0; i < num2; i++){
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
   //Code Here
-
+var longArr = function(arr1, arr2) {
+    if (arr1.length > arr2.length) {
+      return arr1;
+    } else {
+      return arr2;
+    }
+}
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
@@ -222,3 +242,8 @@ for(var i = 0; i < num2; i++){
 */
 
   //Code Here
+var both = function(arr1, arr2) {
+   var arr3 = [];
+   return arr3 = arr1.concat(arr2);
+
+}
