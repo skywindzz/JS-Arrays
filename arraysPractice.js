@@ -5,7 +5,9 @@ var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item the given array.
 
   //Code Here
-
+var first = function(arr) {
+   return arr[0];
+}
 
 //Next problem
 
@@ -15,8 +17,10 @@ var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item the given array.
 
 
-  //Code Here
-
+  //Code Here 
+var last = function(one) {
+   return one.pop;
+}
 
 //Next Problem
 
@@ -25,6 +29,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
   //Code Here
+var looper = function(family) {
+      for (i = 0; i < family.length;i++) {
+          alert(family[i]);
+      };
+}
 
 
 //Next problem
@@ -35,6 +44,14 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
+var reversedLooper = function(letters) {
+      var rletters = letters.reverse();
+      console.log(rletters);
+      for (var i = 0; i < letters.length; i++) {
+          console.log(rletters[i]);
+      };
+}
+
 
 
 //Next Problem
@@ -44,20 +61,40 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
-
+  
+var evenFinder = function(nums) {
+    for (var i = nums.length; i > 0; i--)
+      if (nums[i]%2 === 1) {
+          nums.splice(i, 1);
+      }
+      return nums;
+}
 
 //Next problem
 
 
 var nums = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 var evens = [];
-var odds = []
+var odds = [];
 //Write a function called divider that is given three arguments, nums, evens, and odds.
 //Have divider return an Array with the first item in the array being the evens array (all the even values from nums) and the second item in the Array being the odds array(all the odd values from nums).
 
 
 
   //Code Here
+
+var divider = function(nums) {
+    for (var i = nums.length-1; i > 0; i--) {
+        if (nums[i]%2 === 0) {
+            nums.splice(i, 0);
+            evens.push(nums[i]);
+        } else {
+            odds.push(nums[i]);
+        }
+        }    
+    }
+
+
 
 
 //Next Problem
@@ -71,6 +108,16 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
   //Code Here
 
+var finder = function(rand, nums) {
+      for(var i = 0; i < nums.length; i++) {
+           if(rand === nums[i]) {
+             return true;
+           }
+
+      }
+      return false;
+    }
+     
 
 //Next problem
 
@@ -97,7 +144,25 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
+var removeItem = function (list, remove) {
+     for (var i = 0; i < list.length; i++) {
+        if (list[i] === remove) {
+            list.splice(i, 1);
+        }
+     }
+return list;
+console.log(list);
+}
 
+var addItem = function (list, addlist) {
+    for (var i = 0; i < list.length; i++) {
+        if (list[i] === addlist) {
+           return list;
+        } else {
+           return console.log(list.push(addlist));
+        }
+    }   
+}
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
@@ -111,6 +176,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
+var maker = function() {
+    var numbers = [];
+    for (var i = 0; i < 225; i++) {
+        numbers.push(i);
+    }
+    return console.log(numbers);
+}
 
 
 //Next Problem
@@ -122,7 +194,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
   //Code Here
 
-
+var addTen 
 
 //Next Problem
 
