@@ -63,7 +63,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   //Code Here
   
 var evenFinder = function(nums) {
-    for (var i = nums.length; i > 0; i--)
+    for (var i = nums.length - 1; i > 0; i--)
       if (nums[i]%2 === 1) {
           nums.splice(i, 1);
       }
@@ -84,14 +84,15 @@ var odds = [];
   //Code Here
 
 var divider = function(nums) {
-    for (var i = nums.length-1; i > 0; i--) {
+    for (var i = 0; i < nums.length; i++) {
         if (nums[i]%2 === 0) {
-            nums.splice(i, 0);
             evens.push(nums[i]);
         } else {
             odds.push(nums[i]);
         }
-        }    
+        } 
+        console.log(odds);
+        console.log(evens); 
     }
 
 
@@ -131,7 +132,7 @@ var str = 'this is my sentence';
 var reverse = function(string) {
     string = string.split("").reverse().join("");
     return string;
-}
+} 
 
 //Next Problem
 
@@ -214,27 +215,7 @@ var addTen = function(num) {
 
 
 
-var num1 = Math.floor(Math.random() * (30 - 0) + 0);
-var num2 = Math.floor(Math.random() * (30 - 0) + 0);
-var arr1 = [];
-var arr2 = [];
-for(var i = 0; i < num1; i++){
-  arr1.push(i);
-}
-for(var i = 0; i < num2; i++){
-  arr2.push(i);
-}
-//Above is some code that adds a random number to both arr1 and arr2.
-//Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
-  //Code Here
-var longArr = function(arr1, arr2) {
-    if (arr1.length > arr2.length) {
-      return arr1;
-    } else {
-      return arr2;
-    }
-}
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
